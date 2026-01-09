@@ -1,0 +1,5 @@
+*.tif
+*.nc
+*.hdf5
+*.nc4
+__pycache__/

@@ -1,6 +1,6 @@
 Overview
 
-This project implements a first-order, physically based landslide susceptibility model using digital elevation data (DEM) and rainfall input. Terrain slope, soil moisture increase, and an infinite slope stability model are combined to compute a spatial Factor of Safety (FS) identifying potentially unstable slopes.
+This project is a proof of concept implementing a first-order, physically based landslide susceptibility model using digital elevation data (DEM) and rainfall input. Terrain slope, soil moisture increase, and an infinite slope stability model are combined to compute a spatial Factor of Safety (FS) identifying potentially unstable slopes.
 
 The model is designed for conceptual understanding and rapid screening, not for calibrated prediction.
 

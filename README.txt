@@ -1,30 +1,31 @@
-# Moisture-Based Landslide Detection System
+Overview
 
-This project implements a physically-based landslide detection model using
-satellite rainfall and terrain data.
+This project implements a first-order, physically based landslide susceptibility model using digital elevation data (DEM) and rainfall input. Terrain slope, soil moisture increase, and an infinite slope stability model are combined to compute a spatial Factor of Safety (FS) identifying potentially unstable slopes.
 
-## Data Sources
-- SRTM Digital Elevation Model (30 m resolution)
-- NASA GPM IMERG Hourly Precipitation
+The model is designed for conceptual understanding and rapid screening, not for calibrated prediction.
 
-## Methodology
-1. Compute slope from DEM
-2. Estimate soil moisture from rainfall using an infiltration model
-3. Compute Factor of Safety using an infinite slope stability model
-4. Identify landslide failure and warning zones
+Model Summary
 
-## Requirements
-- Python 3.10+
-- numpy
-- rasterio
-- xarray
-- netCDF4
-- matplotlib
+Slope derived from DEM
 
-## Output
-- Factor of Safety (FS)
-- Landslide failure and warning pixels
+Rainfall forcing from gridded data
 
-## Disclaimer
-This is a simplified research/educational model and not an operational
-early warning system.
+Simplified soil-moisture bucket model
+
+Infinite slope stability formulation
+
+Instability thresholds: FS < 1.0 (failure), FS < 1.3 (warning)
+
+Caveats
+
+Rainfall is spatially averaged
+
+Soil properties are uniform
+
+No temporal evolution of infiltration
+
+Pore pressure is parameterized
+
+No hydrological routing or calibration
+
+Outputs are qualitative and should not be interpreted as real-world hazard predictions.
